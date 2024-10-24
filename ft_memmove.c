@@ -1,53 +1,61 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/23 21:28:51 by yhajji            #+#    #+#             */
+/*   Updated: 2024/10/23 23:01:22 by yhajji           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void *ft_memmove(void *dest, void *str , int size)
+void *ft_memmove(void *dest, const void *src, unsigned int n)
 {
-    unsigned char  *p1 = (unsigned char *) dest;
-    unsigned char *p2 = (unsigned char *) str; 
-    int i = 0; 
-    int  j ;
-    
-    if (p1 > p2 && p1 < p2 + size)
+    unsigned char *d = (unsigned char *)dest;
+    unsigned char *s = (unsigned char *)src;
+     unsigned int i;
+
+    i = 0;
+
+    if (d == s)
     {
-        while ( j < (size -1))
+        return (dest);
+    }
+
+    if (d > s && d < s + n)
+    {
+
+        while (i > 0)
         {
-            p1[i] = p2[i];
-            j--;
-         }
-    }else
-    {
-        while ( i < size)
-    {
-        p1[i] = p2[i];
-        i++;
+            d[i - 1] = s[i - 1];
+            i--;
+        }
     }
+    else
+    {
+        i = 0;
+        while (i < n)
+        {
+            d[i] = s[i];
+            i++;
+        }
     }
-    
-    
-
-    
-
     return (dest);
-    
-} 
-
-
-int main() {
-    char str[] = "Hello, World!";
-    int i = 0;
-    
-    // // Overlapping regions, moving a part of the string within itself
-    // memmove(str + 7, str, 6);
-    
-    // printf("%s\n", str);  // Output will be: "Hello, Hello!"
-    
-    // return 0;
-
-    while ((str + 7)[i])
-    {
-         printf("%c", (str + 7)[i]);
-        i++;
-    }
-
 }
+
+// int main(void)
+// {
+//     char src[] = "youssef hajjiii" ;
+
+//     char dest[20] ;
+
+//     ft_memmove(src, src + 8, 7);
+
+//     printf("%s", src);
+
+//     return (0);
+
+// }

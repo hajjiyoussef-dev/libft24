@@ -6,13 +6,13 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 22:06:07 by yhajji            #+#    #+#             */
-/*   Updated: 2024/10/23 00:11:51 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/10/24 13:41:36 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strlen(char *c)
+int ft_strlen(const char *c)
 {
     int i;
 
