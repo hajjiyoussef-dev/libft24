@@ -6,7 +6,7 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 13:14:02 by yhajji            #+#    #+#             */
-/*   Updated: 2024/10/23 21:58:42 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/10/26 15:08:05 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char *ft_memcpy(void *dest, const void *src, int n)
     else
     {
         i = n;
-        while (i > 0) // hadi backword -> (overlaping)
+        while (i > 0) // hadii backword -> (overlaping)
         {
             d[i - 1] = s[i - 1]; // copy from the end
             i--;

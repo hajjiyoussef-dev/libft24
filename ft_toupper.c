@@ -1,27 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 22:06:07 by yhajji            #+#    #+#             */
-/*   Updated: 2024/10/25 12:45:09 by yhajji           ###   ########.fr       */
+/*   Created: 2024/10/24 23:12:19 by yhajji            #+#    #+#             */
+/*   Updated: 2024/10/25 13:32:05 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.h" 
 
-size_t ft_strlen(const char *s)
+int ft_toupper(int c)
 {
-    int i;
-
-    i = 0;
-    while (s[i] != '\0')
+    if (c >= 'a' && c <= 'z')
     {
-        i++;
+        return (c - 32);
     }
-    return (i);
+    return (c);
     
-}
+} 
+
+
+// int main()
+// {
+//     int j = 0;
+//     char str[] = "sdfghjkl;sdfghjkdfghjk\n";
+//     char ch;
+
+//     while (str[j]) {
+//         ch = str[j];
+//         putchar(ft_toupper(ch));
+//         j++;
+//     }
+
+//     return 0;
+// }
 

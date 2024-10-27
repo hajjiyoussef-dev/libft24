@@ -6,7 +6,7 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:29:42 by yhajji            #+#    #+#             */
-/*   Updated: 2024/10/24 22:16:18 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/10/24 23:00:12 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ int ft_strlcat(char *dest, char *src, unsigned int size)
 {
     unsigned int i;
     unsigned int j;
-    unsigned int dlen;
-    unsigned int slen;
+    unsigned int dlen ;
+    unsigned int slen ;
     
     i = 0;
     j = 0;
@@ -35,7 +35,7 @@ int ft_strlcat(char *dest, char *src, unsigned int size)
     {
         j++;
     }
-    j = dlen ;
+    dlen = j;
     slen = ft_strlen(src);
     if (size == 0 || dlen >= size )
     {
@@ -58,7 +58,7 @@ int main(void)
     char dest[] = "hajji";
     char src[] = "hello" ;
     int res ;
-    res = strlcat(dest, src , 4);
+    res = ft_strlcat(dest, src , 4);
     
     printf("%d \n" , res);
     printf("%s" , src);

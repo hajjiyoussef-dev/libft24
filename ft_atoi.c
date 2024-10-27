@@ -6,43 +6,37 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 23:52:22 by yhajji            #+#    #+#             */
-/*   Updated: 2024/10/23 00:19:34 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/10/27 00:41:55 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(char *c)
+int	ft_atoi(char *c)
 {
-    int res;
-    int i;
-    int s;
-    
-    i = 0;
-    res = 0;
-    s = 1 ;
-    while (c[i] == 32 || (c[i] >= 9 && c[i] <= 13))
-    {
-        i++;
-    }
-    while (c[i] == '+' || c[i] == '-')
-    {
-        if(c[i] == '-')
-        {
-            s *= -1 ;
-        }
-        i++;
-    }
-    while ( c[i] != '\0' && (c[i] >= '0' && c[i] <= '9'))
-    {
-        res = res * 10 + (c[i] - '0');
-        i++;
-    }
+	int	res;
+	int	i;
+	int	s;
 
-    return ((res * s)); 
-    
-    
+	i = 0;
+	res = 0;
+	s = 1;
+	while (c[i] == 32 || (c[i] >= 9 && c[i] <= 13))
+	{
+		i++;
+	}
+	while (c[i] == '+' || c[i] == '-')
+	{
+		if (c[i] == '-')
+		{
+			s *= -1;
+		}
+		i++;
+	}
+	while (c[i] != '\0' && (c[i] >= '0' && c[i] <= '9'))
+	{
+		res = res * 10 + (c[i] - '0');
+		i++;
+	}
+	return ((res * s));
 }
-
-
-

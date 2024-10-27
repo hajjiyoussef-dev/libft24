@@ -6,19 +6,22 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 23:25:09 by yhajji            #+#    #+#             */
-/*   Updated: 2024/10/22 23:50:31 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/10/27 00:51:17 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s , int num)
+void	ft_bzero(void *s,	size_t num)
 {
-    unsigned char *p = (unsigned char *)s ;
-    
-    while (num--)
-    {
-        *p++ = 0 ;
-    }
-    
+	unsigned char	*p;
+	size_t			i;
+
+	i = 0;
+	p = (unsigned char *)s;
+	while (i < num)
+	{
+		p[i] = 0;
+		i++;
+	}
 }
