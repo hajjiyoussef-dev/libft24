@@ -6,7 +6,7 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 18:25:00 by yhajji            #+#    #+#             */
-/*   Updated: 2024/10/25 21:49:47 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/10/28 22:22:41 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,36 @@
 
 void *ft_memchr(const void *s, int c, size_t n)
 {
-    const unsigned char *str = (const unsigned char *) s;
-    unsigned char ch = (unsigned char) c ;
+    const unsigned char *str ;
     size_t i;
 
     i = 0;
-    while (str[i] && i < n)
+    str = (const unsigned char *) s;
+    while (i < n)
     {
-        if (str[i] == ch)
+        if (str[i] == (unsigned char) c)
         {
-            return ((void *)str + i);
+            return ((void *)&str[i]);
         }
-        i++;
-        
+        i++; 
     }
+    // if (ch == '\0')
+    //     return ((void *)&str[i]);
+    
     return (0);
       
     
 }
 
-
+// #include <string.h>
 // int main(void)
 // {
-//     char s[] = "youssef hajji hamza hrami" ;
-//     char c = ' ' ;
-//     int  n = 7 ;
-//     printf("%s", ft_memchr(s,c,n)) ;
+//     char *src = "/|\x12\xff\x09\0\x42\042\0\42|\\";
+//  	int size = 12;
+//     // char s[] = "youssef hajji hamza hrami" ;
+//     // char c = '\0' ;
+//     // int  n = 20 ;
+//    //printf("%s", ft_memchr(src,0,0)) ;
+//     printf("%s", memchr(NULL,3,size)) ;
 //     return (0);
 // }

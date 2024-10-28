@@ -1,9 +1,12 @@
+#include <string.h>
 int main(void)
 {
-    char s[] = "youssef hajji" ;
-    char c = 's' ;
-     
-    printf("%s" , ft_strchr(s,c));
+    char src[] =  "wertyuiwerty" ;
+    printf("%s \n" , src +3 ) ;
 
-    return (0);
+    char *me = ft_memcpy(src +3, src ,5 ) ;
+    char *ther = memcpy(src + 3 , src , 5) ;
+    printf("%s\n%s\n" , me , ther) ;
+
+    return (0) ;
 }

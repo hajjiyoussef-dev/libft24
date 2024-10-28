@@ -107,12 +107,26 @@ int main()
     {
         for (size_t i = 0; i < 10; i++)
         {
-        printf("%d ",arr[i] );
+        printf("%d \n",arr[i] );
         }
         
         
     }
     free(arr);
+
+
+    char s12345[] = "hello youssef hajjiqwertyuiopqwertyuiopqwertyuiopasdfghjklasdfghjklasdfghjklqwertyuiopasdfghjkl" ;
+    char *res2345 = ft_strdup(s12345);
+    printf(":test;%s:\n",res2345);
+
+    char dest2323[] = "hajjffffff";
+    const char src2323[] = "hello" ;
+    int res2323 ;
+    res2323 = ft_strlcat(dest2323, src2323 , 10);
+    
+    printf("%d \n" , res2323);
+    printf("%s" , dest2323);
+
     
     return (0);
 

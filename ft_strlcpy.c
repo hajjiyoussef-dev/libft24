@@ -6,61 +6,41 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:35:44 by yhajji            #+#    #+#             */
-/*   Updated: 2024/10/25 12:50:50 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/10/28 23:11:01 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
  #include "libft.h"
-// size_t ft_strlen(const char *c)
-// {
-//     int i ;
-//     i = 0 ;
-//     while (c[i] != '\0')
-//     {
-//         i++;
-//     }
-//     return (i);
-// }
     
-size_t ft_strlcpy(char *dest, const char *src, int size)
+size_t ft_strlcpy(char *dest, const char *src, size_t size)
 {
-    // const char *s;
-    int src_len;
-    int len_to_copy;
-    int i;
+    size_t i;
 
-    
-    src_len = ft_strlen(src); 
-    len_to_copy = 0;
     i = 0;
+    // if ((int)size < 0)
+    //     return (0);
     if (size > 0)
     {
-        if (src_len >= size)
-        {
-            len_to_copy = (size - 1);
-        }
-        else
-        {
-            len_to_copy = src_len;
-        }
-        while (i <= len_to_copy)
-        {
-            dest[i] = src[i];
-            i++;
-        }
-        dest[len_to_copy] = '\0' ;
+       while (src[i]  && i < (size - 1))
+       {
+         dest[i] = src[i];
+         i++;
+       }
+       dest[i] = '\0';
+       
     }
-    return (len_to_copy) ;
-} 
-
+    return (ft_strlen(src));
+    
+}
 // int main(void)
 // {
-//     char src[] = "youssef hajji" ;
-//     char dest[20] ;
-//     int res ;
-//     res = ft_strlcpy(dest, src, 14) ;
-//     printf("%d \n", res);
+//     char src[] = "youssef" ;
+//     char dest[6] ;
 
-//     printf("%s", dest) ;
+//     int len = ft_strlcpy(dest,src,7);
+//     printf("%d , %s",len, dest );
+    
 //     return (0);
 // }
+
+

@@ -6,32 +6,28 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 21:28:51 by yhajji            #+#    #+#             */
-/*   Updated: 2024/10/26 17:36:07 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/10/28 14:14:34 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, unsigned int n)
+void *ft_memmove(void *dest, const void *src, size_t n)
 {
     unsigned char *d = (unsigned char *)dest;
-    unsigned char *s = (unsigned char *)src;
-     unsigned int i;
+    const unsigned char *s = (const unsigned char *)src;
+     size_t i;
 
-    i = 0;
-
-    if (d == s)
+    if (d == s || n == 0)
     {
         return (dest);
     }
 
-    if (d > s && d < s + n)
+    if (d > s)
     {
-
-        while (i > 0)
+        while (n--)
         {
-            d[i - 1] = s[i - 1];
-            i--;
+            d[n] = s[n];
         }
     }
     else
@@ -45,16 +41,24 @@ void *ft_memmove(void *dest, const void *src, unsigned int n)
     }
     return (dest);
 }
-
+// #include <string.h>
 // int main(void)
 // {
-//     char src[] = "youssef hajjiii" ;
+//     char dst1[0xF0];
+//  	char dst2[0xF0];
+//  	char *data = "thi\xc3\x9f \xc3\x9f\xde\xad\xbe\xeftri\xc3\xb1g will be \xc3\xb8v\xc3\xa9rlap\xc3 !\r\n";
+//     int size = 0xF0 - 0xF;
 
-//     char dest[20] ;
+//       //char *arr1 = memmove( dst1,data, size);
+    
+// // // //     char src[] = "123456" ;
+// // // //     printf("%s\n", src + 2);
+// // // //    // char dest[20] ;
 
-//     ft_memmove(src, src + 8, 7);
-
-//     printf("%s", src);
+//     char *arr = ft_memmove( dst1,data, size);
+// // // //    char *arr1 = memmove( src + 2,src, 4);
+// // // //     char *arr11 = memmove( src + 2,src, 4);
+//     printf("%s\n ",arr );
 
 //     return (0);
 

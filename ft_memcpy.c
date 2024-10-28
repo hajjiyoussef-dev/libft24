@@ -6,47 +6,39 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 13:14:02 by yhajji            #+#    #+#             */
-/*   Updated: 2024/10/26 15:08:05 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/10/28 10:28:36 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_memcpy(void *dest, const void *src, int n)
+void *ft_memcpy(void *dest, const void *src, size_t n)
 {
-    char *d = (char *)dest;
-    const char *s = (const char *)src;
-    int i;
+    
+    unsigned char *d = (unsigned char *)dest;
+    unsigned char *s = (unsigned char *)src;
+    size_t i;
 
-    if (d < s) // haadi -> forword (no overlape)
+    i = 0;
+    if (!dest && !src)
+        return NULL;
+    while (i < n)
     {
-        i = 0;
-        while (i < n)
-        {
-            d[i] = s[i]; // copy form the start
-            i++;
-        }
-    }
-    else
-    {
-        i = n;
-        while (i > 0) // hadii backword -> (overlaping)
-        {
-            d[i - 1] = s[i - 1]; // copy from the end
-            i--;
-        }
+        d[i] = s[i];
+        i++;
     }
     return (dest);
 }
-
+// #include <string.h>
 // int main(void)
 // {
-//     char src[] =  "start stopf" ;
-//     printf("%s \n" , src) ;
+//     char src[] =  "wertyuiwerty" ;
+//     char dest[] = "test";
 
-//     ft_memcpy(src, src + 6 , (5 * (sizeof(char)))) ;
-
-//     printf("%s" , src) ;
+//     //char *me = ft_memcpy(((void *)0), "segfaulter tu dois", 17);
+//      char *ther = memcpy(src+3, src , 5) ;
+//     printf("%s\n" , ther ) ;
+//     // printf("%s\n" , ther) ;
 
 //     return (0) ;
 // }

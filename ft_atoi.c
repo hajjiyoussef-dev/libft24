@@ -6,13 +6,13 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 23:52:22 by yhajji            #+#    #+#             */
-/*   Updated: 2024/10/27 00:41:55 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/10/28 19:26:46 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *c)
+int	ft_atoi(const char *c)
 {
 	int	res;
 	int	i;
@@ -25,12 +25,10 @@ int	ft_atoi(char *c)
 	{
 		i++;
 	}
-	while (c[i] == '+' || c[i] == '-')
+	if ((c[i] == '+' || c[i] == '-'))
 	{
 		if (c[i] == '-')
-		{
 			s *= -1;
-		}
 		i++;
 	}
 	while (c[i] != '\0' && (c[i] >= '0' && c[i] <= '9'))
@@ -40,3 +38,12 @@ int	ft_atoi(char *c)
 	}
 	return ((res * s));
 }
+
+
+// int main(void)
+// {
+// 	char chr[] = "-2345672sd56";
+
+// 	printf("%d" ,ft_atoi(chr));
+// 	return (0);
+// }
