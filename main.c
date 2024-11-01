@@ -16,18 +16,7 @@
 
 // int main(void)
 // {
-//     char src[] = "youssef hajjiii" ;
-
-//    // char dest[20] ;
-
-//     ft_memmove(src + 8, src, 7);
-
-//     printf("%s", src);
-
-//     return (0);
-
-    
-    
+//     write(9,"9",1);
 // }
 
 

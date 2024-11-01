@@ -1,39 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 19:51:39 by yhajji            #+#    #+#             */
-/*   Updated: 2024/11/02 00:06:03 by yhajji           ###   ########.fr       */
+/*   Created: 2024/11/01 16:52:43 by yhajji            #+#    #+#             */
+/*   Updated: 2024/11/01 23:27:22 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int	i;
-
-	i = 0;
-	if (s && f)
+	if (n == -2147483648)
 	{
-		while (s[i] != '\0')
-		{
-			f(i, &s[i]);
-			i++;
-		}
+		write(fd, "-2147483648", 11);
+		return ;
+	}
+	if (n < 0)
+	{
+		n = -n;
+		ft_putchar_fd('-', fd);
+	}
+	if (n <= 9)
+	{
+		ft_putchar_fd(n + '0', fd);
+	}
+	else
+	{
+		ft_putnbr_fd((n / 10), fd);
+		ft_putnbr_fd((n % 10), fd);
 	}
 }
-// void function(unsigned int i, char *c )
+// int main()
 // {
-//     if ( i % 2 == 0)
-//         *c = ft_tolower(*c);
-// }
-// int main(void)
-// {
-//     char str[] = "YOUSSEF HAJJI"; 
-//      ft_striteri(str, function);
-//      printf("%s", str);
+//     ft_putnbr_fd(43456, 2);
 // }

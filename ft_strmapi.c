@@ -6,7 +6,7 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 17:01:59 by yhajji            #+#    #+#             */
-/*   Updated: 2024/10/31 19:34:45 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/11/01 22:04:59 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     i = 0;
     if (!s || !f)
     return (NULL);
-    
-   
-  if (!string)
+    len = ft_strlen(s);
+    string = (char *)malloc(len + 1);
+    if (!string)
         return (0);
     while (s[i])
     {
@@ -34,22 +34,22 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     string[len] = '\0';
     return (string);
 }
-char function(unsigned int i, char c)
-{
-    if (i % 2 == 0)
-    {
-       return(ft_toupper(c));
-    }
-    else 
-    {
-       return(ft_tolower(c));
-    }
-}
-int main(void)
-{
-    char s[] = "hello youssef" ;
-    char *res = ft_strmapi(s,function);
+// char function(unsigned int i, char c)
+// {
+//     if (i % 2 == 0)
+//     {
+//        return(ft_toupper(c));
+//     }
+//     else 
+//     {
+//        return(ft_tolower(c));
+//     }
+// }
+// int main(void)
+// {
+//     char s[] = "hello youssef" ;
+//     char *res = ft_strmapi(s,function);
 
-    printf("%s", res);
-    return (0);
-}
+//     printf("%s", res);
+//     return (0);
+// }

@@ -6,7 +6,7 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:22:15 by yhajji            #+#    #+#             */
-/*   Updated: 2024/10/31 19:57:35 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/11/01 22:05:07 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,15 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
     
 }
 
-#include <string.h>
-int main(void)
-{
-    //char s1[] = "youssef hajji hajji" ;
-    char s2[] = "hajji";
+// #include <string.h>
+// int main(void)
+// {
+//     //char s1[] = "youssef hajji hajji" ;
+//     char s2[] = "hajji";
 
-    char *res ;
-    res = strnstr(0,s2, 0); 
-    printf("%s", res);
+//     char *res ;
+//     res = strnstr(0,s2, 0); 
+//     printf("%s", res);
 
-    return (0);
-}
+//     return (0);
+// }

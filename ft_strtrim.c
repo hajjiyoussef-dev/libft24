@@ -6,7 +6,7 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 13:43:39 by yhajji            #+#    #+#             */
-/*   Updated: 2024/10/30 18:52:27 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/11/01 22:05:19 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ char *ft_strtrim(char const *s1, char const *set)
 
 // int main(void)
 // {
-//     char *s = "--youssef hajji-------------------";
-//     char *set = "y";
+//     char *s = "";
+//     char *set = 0;
 //     char *trim =  ft_strtrim(s,set) ; 
 //     printf("%s" , trim);
 //     return (0);
