@@ -6,21 +6,20 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 09:48:16 by yhajji            #+#    #+#             */
-/*   Updated: 2024/10/22 18:49:40 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/10/29 23:33:50 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
-int ft_isalpha(int c)
-{
 
-    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-    {
-        return (1);
-    }
-    else
-    {
-        return (0);
-    }
+int	ft_isalpha(int c)
+{
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }

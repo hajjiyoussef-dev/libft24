@@ -6,11 +6,11 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 23:12:19 by yhajji            #+#    #+#             */
-/*   Updated: 2024/10/25 13:32:05 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/10/29 23:13:26 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
+#include "libft.h"
 
 int ft_toupper(int c)
 {
@@ -19,14 +19,11 @@ int ft_toupper(int c)
         return (c - 32);
     }
     return (c);
-    
-} 
-
-
+}
 // int main()
 // {
 //     int j = 0;
-//     char str[] = "sdfghjkl;sdfghjkdfghjk\n";
+//     char str[] = "sdfghjkl;s\0dfghjkdfghjk\n";
 //     char ch;
 
 //     while (str[j]) {
@@ -37,4 +34,3 @@ int ft_toupper(int c)
 
 //     return 0;
 // }
-
