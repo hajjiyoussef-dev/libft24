@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 23:15:26 by yhajji            #+#    #+#             */
-/*   Updated: 2024/11/05 17:34:25 by yhajji           ###   ########.fr       */
+/*   Created: 2024/11/02 22:57:21 by yhajji            #+#    #+#             */
+/*   Updated: 2024/11/05 16:04:43 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+t_list	*ft_lstnew(void *content)
 {
-	if (c >= 'A' && c <= 'Z')
-	{
-		return (c + 32);
-	}
-	return (c);
+	t_list	*new_node;
+
+	new_node = (t_list *) malloc(sizeof(t_list));
+	if (!new_node)
+		return (NULL);
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
 }
-// int main()
+// #include "string.h"
+// int main(void)
 // {
-//     int j = 0;
-//     char str[] = "GEEKFORGEEKS\n";
-//     char ch;
-
-//     while (str[j]) {
-//         ch = str[j];
-//         putchar(ft_tolower(ch));
-//         j++;
-//     }
-
-//     return 0;
+//     int value = 4567;
+//     //char arr[] = "youssef";
+//     t_list *node = ft_lstnew(&value);
+//         printf("%d", node->content);
 // }

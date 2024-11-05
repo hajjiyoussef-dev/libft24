@@ -6,7 +6,7 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 21:28:51 by yhajji            #+#    #+#             */
-/*   Updated: 2024/11/01 23:15:06 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/11/05 16:14:04 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,41 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	const unsigned char	*s;
-	unsigned char		*d;
+	const unsigned char	*str;
+	unsigned char		*ptr;
 	size_t				i;
 
-	d = (unsigned char *)dest;
-	s = (const unsigned char *)src;
-	if (d == s || n == 0)
+	i = 0;
+	if (dest == src)
 		return (dest);
-	if (d > s)
+	ptr = (unsigned char *)dest;
+	str = (const unsigned char *)src;
+	if (dest == src)
+		return (dest);
+	if (ptr > str)
 	{
 		while (n--)
-			d[n] = s[n];
+			ptr[n] = str[n];
 	}
 	else
 	{
-		i = 0;
-		while (++i < n)
-			d[i] = s[i];
+		while (i < n)
+		{
+			ptr[i] = str[i];
+			i++;
+		}
 	}
 	return (dest);
 }
+// #include <string.h>
 // int main(void)
 // {
-//     char src[] = "hamza" ;
-//     ft_memmove(src + 2, src, 3);
-//     printf("%s" , src + 2);
-
+//     char src[] = "hamzaar" ;
+// 	//char *dest = "hamza" ;
+// 	char dest[20] ;
+//    char *me = ft_memmove(src + 2, src, 3);
+//    char *ther = memmove(src + 2, src, 3);
+//    	printf("%s \n" , me);
+//     printf("%s \n" , ther);
 //     return (0);
 // }

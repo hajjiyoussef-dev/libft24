@@ -6,7 +6,7 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 13:14:02 by yhajji            #+#    #+#             */
-/*   Updated: 2024/10/30 18:51:26 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/11/05 16:11:52 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
-	if (!dest && !src)
-		return (NULL);
+	if (dest == src)
+	{
+		return (dest);
+	}
 	while (i < n)
 	{
 		d[i] = s[i];
@@ -33,13 +35,14 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 // #include <string.h>
 // int main(void)
 // {
-//     char src[] =  "hamzara" ;
-//     //char dest[] = "test";
+//     char src[] =  "abcde" ;
+//     // char *dest = "hamzara";
 
-//     //char *me = ft_memcpy(((void *)0), "segfaulter tu dois", 17);
-//      char *ther = memcpy(src+2, src , 3) ;
-//     printf("%s\n" , ther ) ;
-//     // printf("%s\n" , ther) ;
+//    // char *me = ft_memcpy(((void *)0), "segfaulter tu dois", 17);
+//     char *me = ft_memcpy(src + 1, src , 3);
+//     char *ther = memcpy(src + 1, src , 3) ;
+//    	printf("%s\n" , me );
+//     printf("%s\n" , ther);
 
 //     return (0) ;
 // }

@@ -6,7 +6,7 @@
 /*   By: yhajji <yhajji@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 15:12:58 by yhajji            #+#    #+#             */
-/*   Updated: 2024/11/01 23:50:26 by yhajji           ###   ########.fr       */
+/*   Updated: 2024/11/05 17:37:16 by yhajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,11 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (help_split(s, c, string));
 }
+
+// void ft()
+// {
+// 	system("LEAKS a.out");
+// }
 // int main(void)
 // {
 //     char s[] = " youssef&&you ssefj&&fghj ";
@@ -109,7 +114,9 @@ char	**ft_split(char const *s, char c)
 //         while (s1[i])
 //         {
 //             printf("%s\n", s1[i]);
-//             i++;
+//             free(s1[i]);
+// 			i++;
 //         }
+// 		free(s1);
 //     return (0);
 // }
